@@ -22,10 +22,26 @@ button{
     background-color: transparent;
     border-radius: 5px;
     margin: 10px;
+    
 }
 
 //Immagini Comics
 .img_poster{
     width: 250px;
+}
+
+.img{
+    width: 250px;
+}
+
+//Focus
+.focus{
+    color: red;
+    margin: 20px;
+}
+
+.box{
+    background-color: aliceblue;
+    border: 3px solid black;
 }
 

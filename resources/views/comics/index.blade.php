@@ -30,7 +30,7 @@
        <a href="{{ route('comics.show', $comic) }}"> <button><i class="fa-solid fa-eye" style="color: #63E6BE;"></i></button></a></i>
 
         <!-- Modify -->
-        <button><i class="fa-solid fa-gear" style="color: orange;"></i></button>
+        <a href="{{ route('comics.edit', $comic) }}"> <button><i class="fa-solid fa-gear" style="color: orange;"></i></button></a></i>
 
         <!-- Delete -->
         <button><i class="fa-solid fa-fire" style="color: tomato;"></i></button>

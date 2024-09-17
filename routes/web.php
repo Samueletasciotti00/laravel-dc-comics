@@ -25,4 +25,7 @@ Route::resource('comics',ComicController::class);
 //Comics detail
 Route::get('/comic/{$id}',[ComicController::class, 'show']);
 
+//Comics Modify
+Route::get('/comic/{$id}/edit',[ComicController::class, 'edit']);
+
 
