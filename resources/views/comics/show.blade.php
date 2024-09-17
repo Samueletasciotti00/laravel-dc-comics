@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-<h1>Comics</h1>
+<h1>{{ $comic->title }}</h1>
 @endsection

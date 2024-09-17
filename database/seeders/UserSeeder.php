@@ -15,17 +15,20 @@ class UserSeeder extends Seeder
     {
         $db_comics = config('comics');
 
-        //Debug
-        // dump($db_comics);
-
         //Ciclo per stampare gli elementi del DB;
-        foreach($db_comics as $comic){
+        foreach ($db_comics as $comic) {
 
             // Nuova istanza
             $new_comic = new Comic();
             $new_comic->title = $comic['title'];
-            $new_comic->description =$comic['description']; 
+            $new_comic->description = $comic['description'];
+            $new_comic->thumb = $comic['thumb'];
+            $new_comic->price = $comic['price'];
+            
+
             $new_comic->save();
         }
+
+        dump($db_comics);
     }
 }

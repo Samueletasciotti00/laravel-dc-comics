@@ -17,10 +17,12 @@ use Illuminate\Support\Facades\Route;
 //Home page
 Route::get('/', function (){
 return view('home');
-});
+})->name('home');
 
 //Comics list
 Route::resource('comics',ComicController::class);
 
+//Comics detail
+Route::get('/comic/{$id}',[ComicController::class, 'show']);
 
 

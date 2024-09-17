@@ -3,9 +3,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
+//General
 body {
     background-color: lightblue;
     background-size: cover;
     font-family: "Roboto", sans-serif;
 }
+
+// titles
+h1{
+    text-align: center;
+    margin: 10px;
+}
+// buttons
+button{
+    border: 0.5px solid black;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+//Immagini Comics
+.img_poster{
+    width: 250px;
+}
+
