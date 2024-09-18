@@ -21,3 +21,7 @@ return view('home');
 
 //Comics list
 Route::resource('comics',ComicController::class);
+
+
+//Debug
+// Route::put('comic/{$id}/edit ', 'ComicController@update');

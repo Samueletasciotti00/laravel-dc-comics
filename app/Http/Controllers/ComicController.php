@@ -58,7 +58,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $comic = Comic::find($id);
+        $comic->name = $request->input('name');
+        $comic->description = $request->input('description');
+        
+        $comic->save();
+        return redirect('/comic')->with('success', 'Item updated successfully');
     }
 
     /**
