@@ -29,10 +29,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|min:3|maz:100',
+        // $request->validate([
+        //     'name' => 'required|min:3|maz:100',
             
-        ]);
+        // ]);
+
+        $comic = new Comic;
+ 
+        $comic->title = $request->title;
+        $comic->description = $request->description;
+ 
+        $comic->save();
+ 
+        return redirect('/comics');
     }
 
     /**
@@ -59,11 +68,11 @@ class ComicController extends Controller
     public function update(Request $request, string $id)
     {
         $comic = Comic::find($id);
-        $comic->name = $request->input('name');
+        $comic->title = $request->input('title');
         $comic->description = $request->input('description');
         
         $comic->save();
-        return redirect('/comic')->with('success', 'Item updated successfully');
+        return redirect("/comics/{$id}")->with('success', 'Item updated successfully');
     }
 
     /**

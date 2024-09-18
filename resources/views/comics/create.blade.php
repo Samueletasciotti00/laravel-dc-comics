@@ -5,9 +5,8 @@
 
 <form action="{{route('comics.store')}}" method="POST">
         @csrf
-        @method('PUT')
-        <input type="text" name="name" value="{{ $comic->title }}">
-        <input type="text" name="description" value="{{ $comic->description }}">
+        <input type="text" name="title">
+        <input type="text" name="description">
         <button type="submit">Update</button>
     </form>
 @endsection
