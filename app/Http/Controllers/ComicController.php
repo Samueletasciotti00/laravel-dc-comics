@@ -38,7 +38,8 @@ class ComicController extends Controller
  
         $comic->title = $request->title;
         $comic->description = $request->description;
- 
+        $comic->thumb = $request->thumb;
+        $comic->price = $request->price;
         $comic->save();
  
         return redirect('/comics');
@@ -70,6 +71,8 @@ class ComicController extends Controller
         $comic = Comic::find($id);
         $comic->title = $request->input('title');
         $comic->description = $request->input('description');
+        $comic->thumb = $request->input('thumb');
+        $comic->price = $request->input('price');
         
         $comic->save();
         return redirect("/comics/{$id}")->with('success', 'Item updated successfully');
@@ -80,6 +83,7 @@ class ComicController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $comic = Comic::find($id)->delete();
+        return redirect('/');
     }
 }

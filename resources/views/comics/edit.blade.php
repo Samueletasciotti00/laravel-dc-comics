@@ -9,6 +9,9 @@
         @method('PUT')
         <input type="text" name="title" value="{{ $comic->title }}">
         <input type="text" name="description" value="{{ $comic->description }}">
+        <input type="text" name="thumb" value="{{ $comic->thumb }}">
+        <input type="text" name="price" value="{{ $comic->price }}">
+
         <button type="submit">Update</button>
     </form>
 </div>
